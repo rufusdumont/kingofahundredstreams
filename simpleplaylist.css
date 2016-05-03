@@ -16,12 +16,18 @@ ul.playlist {
 article {text-align: left}
 h1 {text-align: center;
 font-size: 22px}
+h2 {text-align: center;
+font-size: 14px
+font-family: sans-serif;
+margin:auto}
+
 pre{
   font-family: sans-serif;
   margin:auto;
 }
 
-.outro {text-align:auto; margin: auto;}
+
+.outro {text-align:auto;}
 ul.playlist li {
   list-style: none;
 }

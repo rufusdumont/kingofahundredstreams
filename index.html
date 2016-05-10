@@ -15,7 +15,8 @@
   <link rel="stylesheet" href="simpleplaylist.css" type="text/css">
   <script type="text/javascript" src="jquery.min.js"></script>
   <script src="jquery.simpleplaylist.js"></script>
-
+  <script src="read-along.js"></script>
+  <script src="main.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
         $(".playlist").playlist();
@@ -23,6 +24,8 @@
   </script>
 </head>
 <body>
+  <h2 class='loading'>
+  </h2>
   <h1>King of a Hundred Streams</h1>
 <div align="center">
   <intro>
@@ -38,27 +41,41 @@
         <span class="minus">-</span>
         <span id="timeleft">3:19</span>
       </div>
-      <article>
-        <pre>
-
-The Tao that can be told is not the eternal Tao.
-The name that can be named is not the eternal name.
-The nameless is the beginning of heaven and Earth.
-The named is the mother of the ten thousand things.
-Ever desireless, one can see the mystery.
-Ever desiring, one sees the manifestations.
-These two spring from the same source but differ in name;
-this appears as darkness.
-Darkness within darkness.
-The gate to all mystery.
-
-</pre>
-      </article>
-      <audio>
-        <source src="audio/1.mp3" type="audio/mp3" />
-        Your browser does not support the <code>audio</code> element.
+      <audio class='song1audio' id="passage-audio" class="passage">
+          <!-- @todo WebM? -->
+          <source  src="audio/1.mp3" type="audio/mp3">
+          <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
       </audio>
+  </p>
+  <p class="passage-audio-unavailable" hidden>
+      <em class="error"><strong>Error:</strong> You will not be able to do the read-along audio because your browser is not able to play MP3, Ogg, or WAV audio formats.</em>
+  </p>
+
+  <p class="autofocus-current-word" hidden>
+      <input type="checkbox" id="autofocus-current-word" checked>
+      <label for="autofocus-current-word">Auto-focus/auto-scroll</label>
+  </p>
+      <article>
+
+        <div class="song1text passage">
+            <h3 class="section-heading">Tao 1</h3>
+            <p><sup class="verse-start"></sup><span data-dur=".4" data-begin="9">The Tao</span> <span data-dur=".6" data-begin="9.4">that can be</span> <span data-dur="1" data-begin="10">told</span> <span data-dur=".7" data-begin="11">is not</span>
+              <span data-dur="1" data-begin="11.6">the eternal</span> <span data-dur=".7" data-begin="12.6">Tao.</span></br> <span data-dur=".16" data-begin="15.8">The name</span> <span data-dur=".7" data-begin="16">that can be</span>
+              <span data-dur=".9" data-begin="16.8">named</span><span data-dur="1" data-begin="18.6"> is not</span><span data-dur=".9" data-begin="19.5"> the enternal</span> <span data-dur="3" data-begin="20.8">name.</span>
+            </br><span data-dur=".3" data-begin="24.9">The nameless</span><span data-dur=".3" data-begin="25.8"> is the beginning</span><span data-dur=".3" data-begin="27.5"> of heaven</span><span data-dur=".3" data-begin="28.5"> and Earth.</span>
+          </br><span data-dur=".3" data-begin="33.5">The named</span><span data-dur=".3" data-begin="34.5"> is the mother</span><span data-dur=".1" data-begin="35.4"> of</span><span data-dur=".3" data-begin="35.6"> ten thousand things.</span>
+        </br><span data-dur=".3" data-begin="45.9">Ever desireless,</span><span data-dur=".3" data-begin="48"> one can see</span><span data-dur=".1" data-begin="48.5"> the mystery.</span>
+      </br><span data-dur=".3" data-begin="50.1">Ever desiring</span><span data-dur=".3" data-begin="51.4"> one can see</span><span data-dur=".1" data-begin="52.2"> the manifestations.</span>
+    </br><span data-dur=".3" data-begin="59.2">These</span><span data-dur=".3" data-begin="59.9"> two</span><span data-dur=".1" data-begin="60.5"> spring</span><span data-dur=".1" data-begin="61"> from the</span><span data-dur=".1" data-begin="61.5"> same</span>
+    <span data-dur=".1" data-begin="62.2"> source</span>
+  </br><span data-dur=".1" data-begin="63.8">but differ</span><span data-dur=".1" data-begin="64.5"> in name;</span>
+  </br><span data-dur=".1" data-begin="66">this appears</span><span data-dur=".1" data-begin="67"> as darkness.</span>
+</br><span data-dur=".1" data-begin="73.5">Darkness</span><span data-dur=".1" data-begin="74.3"> within</span><span data-dur=".1" data-begin="74.8"> darkness.</span>
+  </br><span data-dur=".1" data-begin="75.8">The gate</span><span data-dur=".1" data-begin="76.4"> to all</span><span data-dur=".1" data-begin="77"> mystery.</span>
+        </div>
+      </article>
     </li>
+
     <li>
       <div class="track">
         <span class="controls" id="playToggle"></span>
@@ -66,25 +83,33 @@ The gate to all mystery.
         <span class="minus">-</span>
         <span id="timeleft">:48</span>
       </div>
-      <article>
-        <pre>
+      <audio class='song4audio' id="passage-audio" class="passage">
+          <!-- @todo WebM? -->
+          <source  src="audio/4.mp3" type="audio/mp3">
+          <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
+      </audio>
 
+      <article>
+      </p>
+      <p class="passage-audio-unavailable" hidden>
+          <em class="error"><strong>Error:</strong> You will not be able to do the read-along audio because your browser is not able to play MP3, Ogg, or WAV audio formats.</em>
+      </p>
+
+          <article>
+        <pre class='passage song4text'>
 The Tao is an empty vessel; it is used, but never filled.
-Oh, unfathomable source of ten thousand things!
-Blunt the sharpness,
-Untangle the knot,
-Soften the glare,
-Merge with dust.
-Oh, hidden deep but ever present!
-I do not know from whence it comes.
-It is the forefather of the gods.
+ Oh, unfathomable source of ten thousand things!
+ Blunt the sharpness,
+ Untangle the knot,
+ Soften the glare,
+ Merge with dust.
+ Oh, hidden deep but ever present!
+ I do not know from whence it comes.
+ It is the forefather of the gods.
 
 </pre>
-      </article>
-      <audio>
-        <source src="audio/4.mp3" type="audio/mp3" />
-        Your browser does not support the <code>audio</code> element.
-      </audio>
+
+    </article>
     </li>
     <li>
       <div class="track">
@@ -93,21 +118,26 @@ It is the forefather of the gods.
         <span class="minus">-</span>
         <span id="timeleft">1:21</span>
       </div>
-      <article>
-        <pre>
+      <audio class='song6audio' id="passage-audio" class="passage">
+          <!-- @todo WebM? -->
+          <source  src="audio/6.mp3" type="audio/mp3">
+          <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
+      </audio>
+      </p>
+      <p class="passage-audio-unavailable" hidden>
+          <em class="error"><strong>Error:</strong> You will not be able to do the read-along audio because your browser is not able to play MP3, Ogg, or WAV audio formats.</em>
+      </p>
 
+          <article>
+        <pre class='passage song6text'>
 The valley spirit never dies;
-It is the woman, primal mother.
-Her gateway is the root of heaven and Earth.
-It is like a veil barely seen.
-Use it; it will never fail.
+ It is the woman, the primal mother.
+ Her gateway is the root of heaven and Earth.
+ It is like a veil barely seen.
+ Use it; it will never fail.
 
 </pre>
-      </article>
-      <audio>
-        <source src="audio/6.mp3" type="audio/mp3" />
-        Your browser does not support the <code>audio</code> element.
-      </audio>
+
     </li>
     <li>
       <div class="track">
@@ -116,13 +146,24 @@ Use it; it will never fail.
         <span class="minus">-</span>
         <span id="timeleft">1:01</span>
       </div>
-      <article>
-        <pre>
+      <audio class='song8audio' id="passage-audio" class="passage">
+          <!-- @todo WebM? -->
+          <source  src="audio/8.mp3" type="audio/mp3">
+          <em class="error"><strong>Error:</strong> Your browser doesn't appear to support HTML5 Audio.</em>
+      </audio>
 
+      <article>
+      </p>
+      <p class="passage-audio-unavailable" hidden>
+          <em class="error"><strong>Error:</strong> You will not be able to do the read-along audio because your browser is not able to play MP3, Ogg, or WAV audio formats.</em>
+      </p>
+
+          <article>
+        <pre class='passage song8text'>
 The highest good is like water.
-Water give life to the ten thousand things and does
-not strive.
-It flows in places men reject and so is like the Tao.
+ Water gives life to the ten thousand things and does
+ not strive.
+ It flows in places men reject and so it is like the Tao.
 
 In dwelling, be close to the land.
 In meditation, go deep in the heart.
@@ -134,11 +175,7 @@ In action, be aware of the time and the season.
 No fight: No blame.
 
 </pre>
-      </article>
-      <audio>
-        <source src="audio/8.mp3" type="audio/mp3" />
-        Your browser does not support the <code>audio</code> element.
-      </audio>
+
     </li>
     <li>
       <div class="track">
@@ -155,7 +192,7 @@ It is the center hole that makes it useful.
 Shape clay into a vessel;
 It is the space within that makes it useful.
 Cut doors and windows for a room;
-It is the holes which make it useful.
+It's the holes which makes it useful.
 Therefore benefit comes from what is there;
 Usefulness from what is not there.
 
@@ -612,5 +649,6 @@ all 81 verses of the Tao Te Ching.
 </pre>
 
 </outro>
+
 </body>
 </html>

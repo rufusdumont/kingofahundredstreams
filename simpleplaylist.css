@@ -1,3 +1,4 @@
+span:focus { outline: none; }
 ul.playlist {
   width: 305px;
   padding: 10px;
@@ -13,7 +14,7 @@ ul.playlist {
 
 }
 
-article {text-align: left}
+article {text-align: left;line-height: 1.4em;}
 h1 {text-align: center;
 font-size: 22px}
 h2 {text-align: center;
@@ -93,4 +94,85 @@ div.progress {
   -o-border-radius: 3px;
   border-radius: 3px;
   background: #22ccff;
+}
+
+html {
+    background: #333;
+    font-family: Verdana, sans-serif;
+}
+body {
+    background: white;
+    padding: 1em;
+    border-radius: 1em;
+}
+a {
+    color: #0E2560;
+}
+h2 {
+    margin-bottom: 1em;
+}
+.passage-audio {
+    height: 2em;
+}
+#passage-audio {
+    width: 100%;
+    max-height: 2em;
+}
+span.speaking {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color:black;
+    color:white;
+}
+.autofocus-current-word,
+.playback-rate {
+    font-size: smaller;
+}
+.autofocus-current-word label,
+.playback-rate label {
+    font-weight: bold;
+}
+q {
+    quotes: "“" "”" "‘" "’";
+}
+.section-heading {
+    display: none;
+}
+.passage p {
+    line-height: 1.4em;
+}
+.verse-start {
+    line-height: 0;
+}
+.initialized span[data-begin]:focus,
+.initialized span[data-begin]:hover {
+    background-color: grey
+    box-shadow: 0px 0px 4px yellow;
+}
+.initialized span[data-begin].speaking {
+    background-color: black;
+    box-shadow: 0px 0px 4px black;
+}
+.initialized span[data-begin] {
+    cursor: pointer;
+}
+.error {
+    color: red;
+}
+
+article > footer {
+    border-top: solid 1px yellow;
+    padding-top: 1em;
+    margin-top: 1em;
+}
+
+footer {
+    margin-bottom: 0.5em;
+    line-height: 1.4em;
+    font-size: small;
+}
+footer img {
+    vertical-align: text-bottom;
 }

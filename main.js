@@ -66,7 +66,9 @@ window.addEventListener('load', function (e) {
     annotateSong( 47 , [1.84, 2.51, 3.13, 3.98, 4.09, 4.3, 4.63, 4.75, 5.22, 7.85, 8.43, 9.07, 9.45, 9.66, 11.68, 11.78, 11.97, 12.44, 12.63, 13.07, 13.35, 15.71, 16.31, 16.52, 17.02, 17.35, 17.38, 17.78, 18.03, 20.57, 20.97, 21.2, 21.63, 21.98, 22.37, 24.51, 24.73, 25.21, 25.75, 26.63, 28.88, 29.4, 30.08]);
     annotateSong( 51 , [.51, .76, 1.31, 1.99, 2.26, 2.45, 3.25, 3.44, 3.59, 4.3, 4.59, 6.79, 7.07, 7.27, 7.96, 8.23, 9.62, 9.76, 9.92, 10.44, 10.9, 13.24, 13.66, 13.85, 14.23, 14.95, 15.64, 16.03, 16.81, 17.11, 18.05, 18.21, 19.03, 19.23, 20.08, 20.29, 21.35, 22.08, 22.32, 23.14, 23.34, 24.07, 24.41]);
     annotateSong( 55 , [39.12, 39.92, 40.4, 41.21, 41.9, 42.62, 44.31, 44.43]);
-
+    annotateSong( 65 , [.69, .82, 1, 1.46, 1.78, 1.9, 2.03, 2.17, 2.34, 2.55, 3.18, 3.48, 3.6, 4.2, 4.44, 4.66, 4.9, 5.13, 5.26, 5.43, 15.94, 16.24, 16.72, 16.93, 17.07, 17.33, 17.5, 23.48, 23.89, 24.15, 24.38, 24.53, 29.01, 29.44, 29.76, 30.05, 30.17, 30.4, 31.41, 31.73, 31.87, 35.3, 35.56, 35.72, 35.9, 36.88, 37.5, 37.6, 37.68, 38.14, 38.25, 38.41, 41.79, 41.98, 42.19, 42.33, 42.45, 46.93, 47.88, 48.02, 48.2, 48.6, 53.54, 53.93, 54.21, 54.33, 54.53, 54.74, 61.03, 61.18, 61.7, 61.91, 62.26, 62.47, 62.7, 62.88, 63.14]);
+    annotateSong( 66 , [70.08, 70.3, 70.39, 70.52, 70.64, 70.9, 71.07, 71.21, 71.65, 72.74, 73.27, 74.39, 74.71, 75.03, 75.25, 75.83, 76.02, 76.15, 76.28, 76.48, 76.66, 76.81, 78.24]);
+    annotateSong( 71 , [ 1.19, 3.85, 6.47, 9.1, 11.75, 14.79, 17.48, 20.19, 22.85, 23.16, 24.07, 24.26, 25.9, 26.07, 26.45, 26.74, 27.04, 29.35, 29.51, 29.92, 30.16, 30.45, 31.11, 31.56, 31.74, 32.87, 33.19, 35.26,  35.99, 36.37, 36.62]);
 
     //attach_read_along(document.querySelector('.song1text'),document.querySelector('.song1audio'))
     attach_read_along(document.querySelector('.song1text'),document.querySelector('.song1audio'))
@@ -80,6 +82,10 @@ window.addEventListener('load', function (e) {
     attach_read_along(document.querySelector('.song47text'),document.querySelector('.song47audio'))
     attach_read_along(document.querySelector('.song51text'),document.querySelector('.song51audio'))
     attach_read_along(document.querySelector('.song55text'),document.querySelector('.song55audio'))
+    attach_read_along(document.querySelector('.song65text'),document.querySelector('.song65audio'))
+    attach_read_along(document.querySelector('.song66text'),document.querySelector('.song66audio'))
+    attach_read_along(document.querySelector('.song71text'),document.querySelector('.song71audio'))
+
     document.body.classList.add('initialized');
     document.querySelector('.loading').hidden = true;
 }, false);

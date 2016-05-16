@@ -1,3 +1,5 @@
+
+
 span:focus { outline: none; }
 ul.playlist {
   width: 305px;
@@ -9,7 +11,7 @@ ul.playlist {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  background: #eee;
+  background: #fff;
   margin: auto;
 
 }
@@ -75,7 +77,7 @@ span#timeleft {
 
 div.progressBar {
   width: 100%;
-  margin: 3px 0;
+  margin: 6px 0;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -86,27 +88,27 @@ div.progressBar {
 }
 
 div.progress {
-  width: 0%;
-  height: 5px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-  border-radius: 3px;
+  width: 5%;
+  height: 6px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
   background: #22ccff;
 }
 
 html {
-    background: #333;
+    background: #444;
     font-family: Verdana, sans-serif;
 }
 body {
-    background: white;
+    background: none;
     padding: 1em;
     border-radius: 1em;
 }
 a {
-    color: #0E2560;
+    color: white;
 }
 h2 {
     margin-bottom: 1em;
